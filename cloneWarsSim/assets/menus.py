@@ -44,4 +44,8 @@ class Attack():
         'Dodge',
         ]
         attacks.append(attackChoices)
-    print(attacks)
+    count = 1
+    for attack in attacks:
+        print("%s. %s" % (count, attack))
+        count += 1
+    attackSelection = input("Pick an Attack(Type the number):\n")
