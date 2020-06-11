@@ -1,6 +1,29 @@
-from jediClass import Jedi
-from droidClass import Droid
-from cloneClass import Clone
+class Clone():
+    def __init__(self):
+        self.health = 150
+        self.defence = 15
+        self.attack = 15
+
+class DarkSide():
+    def __init__(self):
+        self.health = 1000
+        self.classType = "Melee"
+        self.defence = 100
+        self.attack = 100
+
+class Jedi():
+    def __init__(self):
+        self.health = 1000
+        self.classType = "Melee"
+        self.defence = 100
+        self.attack = 100
+
+class Droid():
+    def __init__(self):
+        self.health = 100
+        self.classType = "Ranged"
+        self.defence = 10
+        self.attack = 10
 
 class Lightsaber():
     def __init__(self):

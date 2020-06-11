@@ -28,8 +28,11 @@ class CharSelection():
 
 class Attack():
     def __init__(self):
-        from assets.classes.charactersAndWeapons.weaponsClass import DC15, DC15X, DC17M, Lightsaber
-        
+        from classes import DC15
+        from classes import DC15X
+        from classes import DC17M
+        from classes import Lightsaber
+
         self.attacks = []
         if DC15 or DC15X or DC17M:
             self.attackChoices = [
