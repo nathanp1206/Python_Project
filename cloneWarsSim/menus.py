@@ -26,20 +26,21 @@ class CharSelection():
     
         self.characterSelection = input("Pick a Character(Type the number):\n")
 
-class Attack():
+class Attacks():
     def __init__(self):
         from classes import DC15
         from classes import DC15X
         from classes import DC17M
         from classes import Lightsaber
+        from characters import Dooku, Stormtrooper, Droids, Mace, Kit, Obi, Anakin
 
-        self.attacks = []
-        if DC15 or DC15X or DC17M:
+        self.attacks1 = []
+        if self.weaponType == DC15 or weaponType == DC15X or weaponType == DC17M:
             self.attackChoices = [
                 'Shoot',
                 'Dodge'
             ]
-            self.attacks.append(self.attackChoices)
+            self.attacks1.append(self.attackChoices)
         elif Lightsaber:
             self.attackChoices = [
             'Chop',
@@ -48,10 +49,10 @@ class Attack():
             'Lunge',
             'Dodge',
             ]
-            self.attacks.append(self.attackChoices)
+            self.attacks1.append(self.attackChoices)
         self.count = 1
-        for self.attacked in self.attacks:
-            print("%s. %s" % (self.count, self.attacked))
+        for self.attack in self.attacks1:
+            print("%s. %s" % (self.count, self.attack))
             self.count += 1
         self.attackSelection = input("Pick an Attack(Type the number):\n")
 

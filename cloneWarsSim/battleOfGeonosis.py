@@ -1,6 +1,6 @@
-from menus import Attack
+from menus import Attacks1
 
 class Geonosis():
     def __init__(self):
-        Attack()
+        Attacks1()
     
