@@ -52,10 +52,10 @@ def Attack(battle):
     elif weaponType == "Melee":
         attackChoices = [
         'Chop',
-        'Block',
+        'Dodge',
         'Slash',
         'Lunge',
-        'Dodge',
+        'Block'
         ]
         attacks.extend(attackChoices)
     count = 1
