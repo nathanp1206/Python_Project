@@ -1,13 +1,11 @@
-from menus import Opening, Attacks, CharSelection
-from characters import Obi
+from menus import Opening, Attack, CharSelection, Selection
+from characters import Obi, Anakin, Kit, Mace, Stormtrooper
 from battleOfGeonosis import Geonosis
 
 
 selection = Opening()
-character = CharSelection().characterSelection
-print('You selected %s' % character)
-
+character = Selection()
 battle = Geonosis(character)
-attackSelection = Attacks(battle)
-attackSelection = battle.menus["Attacks"](battle)
-print(attackSelection)
+# attackSelection = Attack(battle)
+
+attackSelection = battle.menus["Attack"](battle)

@@ -29,26 +29,26 @@ class CharSelection():
     
         self.characterSelection = input("Pick a Character(Type the number):\n")
         if self.characterSelection == '1':
-            self.characterSelection = 'Anakin'
+            print('You selected Anakin')
         elif self.characterSelection == '2':
-            self.characterSelection = 'Obi'
+            print('You selected Obi')
         elif self.characterSelection == '3':
-            self.characterSelection = 'Mace'
+            print('You selected Mace')
         elif self.characterSelection == '4':
-            self.characterSelection = 'Kit'
+            print('You selected Kit')
         elif self.characterSelection == '5':
-            self.characterSelection = 'StormTrooper'
+            print('You selected StormTrooper')
 
-def Attacks(battle):
+def Attack(battle):
     weaponType = battle.character.weaponType
 
-    attacks1 = []
+    attacks = []
     if weaponType == "Ranged":
         attackChoices = [
             'Shoot',
             'Dodge'
         ]
-        attacks1.append(attackChoices)
+        attacks.extend(attackChoices)
     elif weaponType == "Melee":
         attackChoices = [
         'Chop',
@@ -57,10 +57,28 @@ def Attacks(battle):
         'Lunge',
         'Dodge',
         ]
-        attacks1.append(attackChoices)
+        attacks.extend(attackChoices)
     count = 1
-    for attack in attacks1:
+    for attack in attacks:
         print("%s. %s" % (count, attack))
         count += 1
     attackSelection = input("Pick an Attack(Type the number):\n")
     return attackSelection
+
+def Selection():
+    from menus import CharSelection
+    from characters import Obi, Anakin, Mace, Kit, Stormtrooper
+
+    character = CharSelection().characterSelection
+
+    if character == '1':
+        character = Anakin()
+    elif character == '2':
+        character = Obi()
+    elif character == '3':
+        character = Mace()
+    elif character == '4':
+        character = Kit()
+    elif character == '5':
+        character = Stormtrooper()
+    return character
