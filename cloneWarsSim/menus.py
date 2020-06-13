@@ -1,16 +1,19 @@
-class Opening():
-    def __init__(self):
-        self.battles = {'Arantara', 'Christophsis', 'Corvair Sector', 'Geonosis', 'Murkhana', 'Teth'}
-
-        self.count = 1
-        for self.battle in self.battles:
-            print("%s. %s" % (self.count, self.battle))
-            self.count += 1
+# class Opening():
+#     def __init__(self):
+def Opening():
+    battles = {'Geonosis'}
+    count = 1
+    for battle in battles:
+        print("%s. %s" % (count, battle))
+        count += 1
   
-        self.openingSelection = input("Pick a battle to start(Type the number):\n")
+    openingSelection = input("Pick a battle to start(Type the number):\n")
+    return openingSelection
 
 
 class CharSelection():
+    from characters import Anakin, Obi, Mace, Kit, Stormtrooper
+
     def __init__(self):
         self.character = {
             'Anakin Skywalker',
@@ -25,34 +28,39 @@ class CharSelection():
             self.count += 1
     
         self.characterSelection = input("Pick a Character(Type the number):\n")
+        if self.characterSelection == '1':
+            self.characterSelection = 'Anakin'
+        elif self.characterSelection == '2':
+            self.characterSelection = 'Obi'
+        elif self.characterSelection == '3':
+            self.characterSelection = 'Mace'
+        elif self.characterSelection == '4':
+            self.characterSelection = 'Kit'
+        elif self.characterSelection == '5':
+            self.characterSelection = 'StormTrooper'
 
-class Attacks():
-    def __init__(self):
-        from classes import DC15
-        from classes import DC15X
-        from classes import DC17M
-        from classes import Lightsaber
-        from characters import Dooku, Stormtrooper, Droids, Mace, Kit, Obi, Anakin
+def Attacks(battle):
+    weaponType = battle.character.weaponType
 
-        self.attacks1 = []
-        if self.weaponType == DC15 or weaponType == DC15X or weaponType == DC17M:
-            self.attackChoices = [
-                'Shoot',
-                'Dodge'
-            ]
-            self.attacks1.append(self.attackChoices)
-        elif Lightsaber:
-            self.attackChoices = [
-            'Chop',
-            'Block',
-            'Slash',
-            'Lunge',
-            'Dodge',
-            ]
-            self.attacks1.append(self.attackChoices)
-        self.count = 1
-        for self.attack in self.attacks1:
-            print("%s. %s" % (self.count, self.attack))
-            self.count += 1
-        self.attackSelection = input("Pick an Attack(Type the number):\n")
-
+    attacks1 = []
+    if weaponType == "Ranged":
+        attackChoices = [
+            'Shoot',
+            'Dodge'
+        ]
+        attacks1.append(attackChoices)
+    elif weaponType == "Melee":
+        attackChoices = [
+        'Chop',
+        'Block',
+        'Slash',
+        'Lunge',
+        'Dodge',
+        ]
+        attacks1.append(attackChoices)
+    count = 1
+    for attack in attacks1:
+        print("%s. %s" % (count, attack))
+        count += 1
+    attackSelection = input("Pick an Attack(Type the number):\n")
+    return attackSelection

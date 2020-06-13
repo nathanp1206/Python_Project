@@ -1,6 +1,13 @@
-from menus import Opening
-import battleOfGeonosis
+from menus import Opening, Attacks, CharSelection
+from characters import Obi
+from battleOfGeonosis import Geonosis
 
 
-Opening()
-battleOfGeonosis.Attack()
+selection = Opening()
+character = CharSelection().characterSelection
+print('You selected %s' % character)
+
+battle = Geonosis(character)
+attackSelection = Attacks(battle)
+attackSelection = battle.menus["Attacks"](battle)
+print(attackSelection)
