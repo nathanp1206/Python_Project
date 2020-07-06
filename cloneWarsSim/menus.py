@@ -15,13 +15,13 @@ class CharSelection():
     from characters import Anakin, Obi, Mace, Kit, Stormtrooper
 
     def __init__(self):
-        self.character = {
+        self.character = [
             'Anakin Skywalker',
             'Obi-Wan Kenobi',
             'Mace Windu',
             'Kit Fisto',
             'StormTrooper'
-        }
+        ]
         self.count = 1
         for self.characters in self.character:
             print("%s. %s" % (self.count, self.characters))

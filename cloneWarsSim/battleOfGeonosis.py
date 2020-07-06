@@ -14,27 +14,27 @@ def Damage(attackSelection):
     damageDone = None
     if attackSelection == '1':
         damageDone = 60 * random.randint(1,3)
-        print('You did %s damage!' % damageDone)
+        print('You did %s damage!\n' % damageDone)
     elif attackSelection == '2':
         damageDone = 0
-        print('You successfully dodged')
+        print('You successfully dodged\n')
     elif attackSelection == '3':
         damageDone = 100 * random.randint(1,3)
-        print('You did %s damage!' % damageDone)
+        print('You did %s damage!\n' % damageDone)
     elif attackSelection == '4':
         damageDone = 85 * random.randint(1,3)
-        print('You did %s damage!' % damageDone)
+        print('You did %s damage!\n' % damageDone)
     elif attackSelection == '5':
         damageDone = 0
-        print('You successfully blocked')
+        print('You successfully blocked\n')
     return damageDone
 
 def Health(damageDone, healthLeft):
     healthRemoval = healthLeft - damageDone
     if healthRemoval > 0:
-        print('Dooku has %s HP left' % healthRemoval)
+        print('Dooku has %s HP left\n' % healthRemoval)
     elif healthRemoval < 0:
-        print('You killed Count Dooku!')
+        print('You killed Count Dooku!\n')
     healthLeft = healthRemoval
     return healthLeft
 
