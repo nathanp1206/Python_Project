@@ -1,3 +1,3 @@
 # Python_Project
 
-This will be a Battle Simulation for the Clone Wars from Star Wars
+This is a small text-based Battle Simulation for the Clone Wars from Star Wars
